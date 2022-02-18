@@ -451,7 +451,4 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
         }
         return string(buffer);
     }
-
-    function  ()  payable  external {
-    }
 }
