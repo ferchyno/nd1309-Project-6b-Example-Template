@@ -181,7 +181,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     {
         // Add the new item as part of Harvest
         Item memory newItem = Item(
-            0,
+            sku,
             _upc,
             _originFarmerID,
             _originFarmerID,
@@ -189,7 +189,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
             _originFarmInformation,
             _originFarmLatitude,
             _originFarmLongitude,
-            0,
+            _upc + sku,
             _productNotes,
             0,
             State.Harvested,
@@ -197,19 +197,10 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
             address(0),
             address(0)
         );
-
         items[_upc] = newItem;
-
 
         // Increment sku
         sku = sku + 1;
-
-        // Set productID
-        items[_upc].sku = sku;
-//        string memory s_upc = toString(items[_upc].upc);
-//        string memory s_sku = toString(items[_upc].sku);
-//        items[_upc].productID = string(abi.encodePacked(s_upc, "_", s_sku));
-        items[_upc].productID = items[_upc].upc + items[_upc].sku;
 
         // Emit the appropriate event
         emit Harvested(_upc);
@@ -427,10 +418,6 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     }
 
     // -------------- .: Private functions :. --------------
-
-//    function _make_payable(address x) internal pure returns (address payable) {
-//        return address(uint160(x));
-//    }
 
     // Parse uint to string  (from openzeppelin String.sol utils)
     function toString(uint value) internal pure returns (string memory) {
