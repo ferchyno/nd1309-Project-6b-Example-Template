@@ -3,19 +3,24 @@ module.exports = {
     development: {
       host: "127.0.0.1",
       port: 8545,
-      network_id: "*" // Match any network id
+      network_id: "*", // Match any network id
+      // gas: 4500000,        // rinkeby has a lower block limit than mainnet
+      // gasPrice: 10000000000
     },
+    // account[0]: 0x27D8D15CbC94527cAdf5eC14B69519aE23288B95
     develop: {
       host: "127.0.0.1",     // Localhost (default: none)
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
+      // gas: 4500000,        // rinkeby has a lower block limit than mainnet
+      // gasPrice: 10000000000
     },
-    rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/f85ca96666304af18d77aa32afaf5293`),
-      network_id: 4,       // rinkeby's id
-      gas: 4500000,        // rinkeby has a lower block limit than mainnet
-      gasPrice: 10000000000
-    },
+    // rinkeby: {
+    //   provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/f85ca96666304af18d77aa32afaf5293`),
+    //   network_id: 4,       // rinkeby's id
+    //   gas: 4500000,        // rinkeby has a lower block limit than mainnet
+    //   gasPrice: 10000000000
+    // },
   },
 
   // Set default mocha options here, use special reporters etc.
