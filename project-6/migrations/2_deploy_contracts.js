@@ -15,6 +15,6 @@ module.exports = function(deployer) {
   // deployer.deploy(ConsumerRole);
   // deployer.deploy(SupplyChain);
   // deployer.deploy(Roles);
-  deployer.deploy(Ownable, { gas: 800000000, from: "0x8BFf4085538746863EFAb81b557b492aA9cEF437" });
+  // deployer.deploy(Ownable, { gas: 800000000, from: "0x8BFf4085538746863EFAb81b557b492aA9cEF437" });
   deployer.deploy(Ownable);
 };
