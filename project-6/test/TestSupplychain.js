@@ -388,5 +388,24 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferTwo[8], consumerID, 'Error: Invalid consumerID')
     })
 
+    // 11th Test
+    it("Testing smart contract function TransferOwnership() that allows change the contract owner", async() => {
+        const supplyChain = await SupplyChain.deployed();
+
+        // var eventEmitted = false;
+        // var event = supplyChain.TransferOwnership();
+        // await event.watch((err, res) => {
+        //     eventEmitted = true;
+        // });
+
+        var originalOwnerId = await supplyChain.getOwner();
+        await supplyChain.transferOwnership(originFarmerID, {from: ownerID});
+        var newOwnerId = await supplyChain.getOwner();
+
+        assert.equal(originalOwnerId, ownerID, 'Invalid originalOwnerId');
+        assert.equal(newOwnerId, originFarmerID, 'Invalid newOwnerId');
+        // assert.equal(eventEmitted, true, 'Invalid event emitted');
+
+    })
 });
 
