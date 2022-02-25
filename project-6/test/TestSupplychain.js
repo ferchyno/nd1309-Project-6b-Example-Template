@@ -33,7 +33,19 @@ contract('SupplyChain', function(accounts) {
     // (7) 0xBd58a85C96cc6727859d853086fE8560BC137632 (100 ETH)
     // (8) 0xe07b5Ee5f738B2F87f88B99Aac9c64ff1e0c7917 (100 ETH)
     // (9) 0xBd3Ff2E3adEd055244d66544c9c059Fa0851Da44 (100 ETH)
-
+    //
+    // Private Keys
+    // ==================
+    // (0) 0x9137dc4de37d28802ff9e5ee3fe982f1ca2e5faa52f54a00a6023f546b23e779
+    // (1) 0x18911376efeff48444d1323178bc9f5319686b754845e53eb1b777e08949ee9b
+    // (2) 0xf948c5bb8b54d25b2060b5b19967f50f07dc388d6a5dada56e5904561e19f08b
+    // (3) 0xfad19151620a352ab90e5f9c9f4282e89e1fe32e070f2c618e7bc9f6d0d236fb
+    // (4) 0x19d1242b0a3f09e1787d7868a4ec7613ac4e85746e95e447797ce36962c7f68b
+    // (5) 0x3bb675f8c07099816e23a3e283090cfb0f793ab625b73ca51a2d027a3c1f2d0e
+    // (6) 0x0faf45306c7daf14d86c266690ce54490e8c0104154cafa87d9e93724efc239d
+    // (7) 0xf2a921dee0ebd7bfaba1a271bcd48c99baa6341a1cdf84ba843521a5555e0273
+    // (8) 0x62734594840dade92a24448c8f676cc3c59fd68909837303417295f2c0f27963
+    // (9) 0xc29afb730456eb83415046550faf8065c8531765396156db8d97fd1fd64c6a6e
 
     console.log("ganache-cli accounts used here...")
     console.log("Contract Owner: accounts[0] ", accounts[0])

@@ -1,112 +1,103 @@
-# Supply chain & data auditing
+## Rinkeby Project Deployment
+The deployments has been done from the Wallet Address:
+	https://rinkeby.etherscan.io/address/0xd88595bcb6518ea2c7ac0459677fd237acf31b76
 
-This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
+The Smart Contract has been deployed with address:
+	https://rinkeby.etherscan.io/address/0xb57817d8c6a318cb66ba4b70e8a5a5d1c8a11383
 
-The DApp User Interface when running should look like...
+The deploy stack is the next:
+	truffle migrate --reset --network rinkeby
+	Using network 'rinkeby'.
 
-![truffle test](images/ftc_product_overview.png)
+	Running migration: 1_initial_migration.js
+	  Replacing Migrations...
+	  ... 0xbb19c7ae195c2e9da61722d8fe9c5e60b4e241f6956aeeb79a5f66c08f0b506d
+	  Migrations: 0xda0a855de5d4ff218c864b4a77fcc7e6b6d21bbb
+	Saving successful migration to network...
+	  ... 0x2b2a433d0b18b5546ba20873be937ab54889f186d5de684e66fdb4ab71ebc06e
+	Saving artifacts...
 
-![truffle test](images/ftc_farm_details.png)
-
-![truffle test](images/ftc_product_details.png)
-
-![truffle test](images/ftc_transaction_history.png)
-
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
-
-```
-Give examples (to be clarified)
-```
-
-### Installing
-
-> The starter code is written for **Solidity v0.4.24**. At the time of writing, the current Truffle v5 comes with Solidity v0.5 that requires function *mutability* and *visibility* to be specified (please refer to Solidity [documentation](https://docs.soliditylang.org/en/v0.5.0/050-breaking-changes.html) for more details). To use this starter code, please run `npm i -g truffle@4.1.14` to install Truffle v4 with Solidity v0.4.24. 
-
-A step by step series of examples that tell you have to get a development env running
-
-Clone this repository:
-
-```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
-```
-
-Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
-
-```
-cd project-6
-npm install
-```
-
-Launch Ganache:
-
-```
-ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/ganache-cli.png)
-
-In a separate terminal window, Compile smart contracts:
-
-```
-truffle compile
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_compile.png)
-
-This will create the smart contract artifacts in folder ```build\contracts```.
-
-Migrate smart contracts to the locally running blockchain, ganache-cli:
-
-```
-truffle migrate
-```
-
-Your terminal should look something like this:
-
-![truffle test](images/truffle_migrate.png)
-
-Test smart contracts:
-
-```
-truffle test
-```
-
-All 10 tests should pass.
-
-![truffle test](images/truffle_test.png)
-
-In a separate terminal window, launch the DApp:
-
-```
-npm run dev
-```
-
-## Built With
-
-* [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
-to make the web faster, safer, and more open.
-* [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
+	Running migration: 2_deploy_contracts.js
+	  Deploying SupplyChain...
+	  ... 0x5533b0245d37dc5d4b679900f065f3a5bfebe3701f4e7a7fc4922026c7ad81ad
+	  SupplyChain: 0xb57817d8c6a318cb66ba4b70e8a5a5d1c8a11383
+	Saving successful migration to network...
+	  ... 0x7b2e7768038a3e5efe2b58dca6d962f49f9ba9b9d901d194407ad13c2784bd9a
+	Saving artifacts...
 
 
-## Authors
+## Project
+The DApp has been reimplemented adding support to add Farmeres, Distributors, Retailers and Consumers
+![truffle test](README_screenshots/roles.png)
 
-See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
+You must set the role account in Metamask to launch the role actions
+All actions has been implemented to use only with a specific role:
+Farmer
+* Harvest
+* Process
+* Pack
+* For Sale
 
-## Acknowledgments
+Distributor:
+* Buy
+* Ship
 
-* Solidity
-* Ganache-cli
-* Truffle
-* IPFS
+Retailer
+* Receive
+
+Consumer
+* Purchase
+
+There are 2 buttons to show the Product Info: Fetch Data 1 and Fetch Data 2
+![truffle test](README_screenshots/search_product_data1.png)
+![truffle test](README_screenshots/search_product_data2.png)
+
+An Example to Transaction History done from local blockchain is the next:
+![truffle test](README_screenshots/transactions.png)
+
+# Used Accounts
+
+Available Accounts
+==================
+(0) 0x27D8D15CbC94527cAdf5eC14B69519aE23288B95 (100 ETH) Contract Owner
+(1) 0x018C2daBef4904ECbd7118350A0c54DbeaE3549A (100 ETH) Farmer
+(2) 0xCe5144391B4aB80668965F2Cc4f2CC102380Ef0A (100 ETH) Distributor
+(3) 0x460c31107DD048e34971E57DA2F99f659Add4f02 (100 ETH) Retailer
+(4) 0xD37b7B8C62BE2fdDe8dAa9816483AeBDBd356088 (100 ETH) Consumer
+(5) 0x27f184bdc0E7A931b507ddD689D76Dba10514BCb (100 ETH)
+(6) 0xFe0df793060c49Edca5AC9C104dD8e3375349978 (100 ETH)
+(7) 0xBd58a85C96cc6727859d853086fE8560BC137632 (100 ETH)
+(8) 0xe07b5Ee5f738B2F87f88B99Aac9c64ff1e0c7917 (100 ETH)
+(9) 0xBd3Ff2E3adEd055244d66544c9c059Fa0851Da44 (100 ETH)
+Private Keys
+==================
+(0) 0x9137dc4de37d28802ff9e5ee3fe982f1ca2e5faa52f54a00a6023f546b23e779
+(1) 0x18911376efeff48444d1323178bc9f5319686b754845e53eb1b777e08949ee9b
+(2) 0xf948c5bb8b54d25b2060b5b19967f50f07dc388d6a5dada56e5904561e19f08b
+(3) 0xfad19151620a352ab90e5f9c9f4282e89e1fe32e070f2c618e7bc9f6d0d236fb
+(4) 0x19d1242b0a3f09e1787d7868a4ec7613ac4e85746e95e447797ce36962c7f68b
+(5) 0x3bb675f8c07099816e23a3e283090cfb0f793ab625b73ca51a2d027a3c1f2d0e
+(6) 0x0faf45306c7daf14d86c266690ce54490e8c0104154cafa87d9e93724efc239d
+(7) 0xf2a921dee0ebd7bfaba1a271bcd48c99baa6341a1cdf84ba843521a5555e0273
+(8) 0x62734594840dade92a24448c8f676cc3c59fd68909837303417295f2c0f27963
+(9) 0xc29afb730456eb83415046550faf8065c8531765396156db8d97fd1fd64c6a6e
+
+
+# UML diagrams 
+![truffle test](README_screenshots/UdacityProyectCoffeeActivity.png)
+![truffle test](README_screenshots/UdacityProyectCoffeeSecuence.png)
+![truffle test](README_screenshots/UdacityProyectCoffeeState.png)
+![truffle test](README_screenshots/UdacityProyectCoffeeDataModel.png)
+
+
+# Versioned:
+
+* Truffle v4.1.14 (core: 4.1.14)
+* Solidity v0.4.24 (solc-js)
+* Ganache CLI v6.12.2 (ganache-core: 2.13.2)
+* Node v16.13.2
+* npm 8.4.1
+* npm view web3 version 1.7.0
+
+#Repository
+* https://github.com/ferchyno/nd1309-Project-6b-Example-Template.git
