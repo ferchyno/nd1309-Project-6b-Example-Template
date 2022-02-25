@@ -21,18 +21,19 @@ contract('SupplyChain', function(accounts) {
     const consumerID = accounts[4]
     const emptyAddress = '0x00000000000000000000000000000000000000'
 
-    ///Available Accounts
-    ///==================
-    ///(0) 0x27d8d15cbc94527cadf5ec14b69519ae23288b95
-    ///(1) 0x018c2dabef4904ecbd7118350a0c54dbeae3549a
-    ///(2) 0xce5144391b4ab80668965f2cc4f2cc102380ef0a
-    ///(3) 0x460c31107dd048e34971e57da2f99f659add4f02
-    ///(4) 0xd37b7b8c62be2fdde8daa9816483aebdbd356088
-    ///(5) 0x27f184bdc0e7a931b507ddd689d76dba10514bcb
-    ///(6) 0xfe0df793060c49edca5ac9c104dd8e3375349978
-    ///(7) 0xbd58a85c96cc6727859d853086fe8560bc137632
-    ///(8) 0xe07b5ee5f738b2f87f88b99aac9c64ff1e0c7917
-    ///(9) 0xbd3ff2e3aded055244d66544c9c059fa0851da44
+    // Available Accounts
+    // ==================
+    // (0) 0x27D8D15CbC94527cAdf5eC14B69519aE23288B95 (100 ETH)
+    // (1) 0x018C2daBef4904ECbd7118350A0c54DbeaE3549A (100 ETH)
+    // (2) 0xCe5144391B4aB80668965F2Cc4f2CC102380Ef0A (100 ETH)
+    // (3) 0x460c31107DD048e34971E57DA2F99f659Add4f02 (100 ETH)
+    // (4) 0xD37b7B8C62BE2fdDe8dAa9816483AeBDBd356088 (100 ETH)
+    // (5) 0x27f184bdc0E7A931b507ddD689D76Dba10514BCb (100 ETH)
+    // (6) 0xFe0df793060c49Edca5AC9C104dD8e3375349978 (100 ETH)
+    // (7) 0xBd58a85C96cc6727859d853086fE8560BC137632 (100 ETH)
+    // (8) 0xe07b5Ee5f738B2F87f88B99Aac9c64ff1e0c7917 (100 ETH)
+    // (9) 0xBd3Ff2E3adEd055244d66544c9c059Fa0851Da44 (100 ETH)
+
 
     console.log("ganache-cli accounts used here...")
     console.log("Contract Owner: accounts[0] ", accounts[0])

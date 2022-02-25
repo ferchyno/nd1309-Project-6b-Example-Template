@@ -1,3 +1,7 @@
+const HDWalletProvider = require('truffle-hdwallet-provider');
+const fs = require('fs');
+const mnemonic = fs.readFileSync(".secret").toString().trim();
+
 module.exports = {
   networks: {
     development: {
@@ -15,12 +19,12 @@ module.exports = {
       // gas: 4500000,        // rinkeby has a lower block limit than mainnet
       // gasPrice: 10000000000
     },
-    // rinkeby: {
-    //   provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/f85ca96666304af18d77aa32afaf5293`),
-    //   network_id: 4,       // rinkeby's id
-    //   gas: 4500000,        // rinkeby has a lower block limit than mainnet
-    //   gasPrice: 10000000000
-    // },
+    rinkeby: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/f85ca96666304af18d77aa32afaf5293`),
+      network_id: 4,       // rinkeby's id
+      gas: 4500000,        // rinkeby has a lower block limit than mainnet
+      gasPrice: 10000000000
+    },
   },
 
   // Set default mocha options here, use special reporters etc.
@@ -33,6 +37,7 @@ module.exports = {
       solc: {
         // version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
         version: "0.4.24",      // Fetch exact version from solc-bin (default: truffle's version)
+        // version: "0.8.0",      // Fetch exact version from solc-bin (default: truffle's version)
         // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
         // settings: {          // See the solidity docs for advice about optimization and evmVersion
         //  optimizer: {
