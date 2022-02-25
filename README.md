@@ -28,7 +28,7 @@ The deploy stack is the next:
 
 ## Project
 The DApp has been reimplemented adding support to add Farmeres, Distributors, Retailers and Consumers
-![truffle test](README_screenshots/roles.png)
+![truffle test](screenshots/roles.png)
 
 You must set the role account in Metamask to launch the role actions
 All actions has been implemented to use only with a specific role:
@@ -49,16 +49,16 @@ Consumer
 * Purchase
 
 There are 2 buttons to show the Product Info: Fetch Data 1 and Fetch Data 2
-![truffle test](README_screenshots/search_product_data1.png)
-![truffle test](README_screenshots/search_product_data2.png)
+![truffle test](screenshots/search_product_data1.png)
+![truffle test](screenshots/search_product_data2.png)
 
 An Example to Transaction History done from local blockchain is the next:
-![truffle test](README_screenshots/transactions.png)
+![truffle test](screenshots/transactions.png)
 
-# Used Accounts
+
+## Use Used Accounts
 
 Available Accounts
-==================
 (0) 0x27D8D15CbC94527cAdf5eC14B69519aE23288B95 (100 ETH) Contract Owner
 (1) 0x018C2daBef4904ECbd7118350A0c54DbeaE3549A (100 ETH) Farmer
 (2) 0xCe5144391B4aB80668965F2Cc4f2CC102380Ef0A (100 ETH) Distributor
@@ -69,8 +69,8 @@ Available Accounts
 (7) 0xBd58a85C96cc6727859d853086fE8560BC137632 (100 ETH)
 (8) 0xe07b5Ee5f738B2F87f88B99Aac9c64ff1e0c7917 (100 ETH)
 (9) 0xBd3Ff2E3adEd055244d66544c9c059Fa0851Da44 (100 ETH)
+
 Private Keys
-==================
 (0) 0x9137dc4de37d28802ff9e5ee3fe982f1ca2e5faa52f54a00a6023f546b23e779
 (1) 0x18911376efeff48444d1323178bc9f5319686b754845e53eb1b777e08949ee9b
 (2) 0xf948c5bb8b54d25b2060b5b19967f50f07dc388d6a5dada56e5904561e19f08b
@@ -83,14 +83,14 @@ Private Keys
 (9) 0xc29afb730456eb83415046550faf8065c8531765396156db8d97fd1fd64c6a6e
 
 
-# UML diagrams 
-![truffle test](README_screenshots/UdacityProyectCoffeeActivity.png)
-![truffle test](README_screenshots/UdacityProyectCoffeeSecuence.png)
-![truffle test](README_screenshots/UdacityProyectCoffeeState.png)
-![truffle test](README_screenshots/UdacityProyectCoffeeDataModel.png)
+## UML diagrams 
+![truffle test](screenshots/UdacityProyectCoffeeActivity.png)
+![truffle test](screenshots/UdacityProyectCoffeeSecuence.png)
+![truffle test](screenshots/UdacityProyectCoffeeState.png)
+![truffle test](screenshots/UdacityProyectCoffeeDataModel.png)
 
 
-# Versioned:
+## Versioned:
 
 * Truffle v4.1.14 (core: 4.1.14)
 * Solidity v0.4.24 (solc-js)
@@ -99,5 +99,5 @@ Private Keys
 * npm 8.4.1
 * npm view web3 version 1.7.0
 
-#Repository
+## Repository
 * https://github.com/ferchyno/nd1309-Project-6b-Example-Template.git
