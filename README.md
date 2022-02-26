@@ -6,7 +6,9 @@ The Smart Contract has been deployed with address:
 	https://rinkeby.etherscan.io/address/0xb57817d8c6a318cb66ba4b70e8a5a5d1c8a11383
 
 The deploy stack is the next:
+
 	truffle migrate --reset --network rinkeby
+
 	Using network 'rinkeby'.
 
 	Running migration: 1_initial_migration.js
@@ -28,11 +30,13 @@ The deploy stack is the next:
 
 ## Project
 The DApp has been reimplemented adding support to add Farmeres, Distributors, Retailers and Consumers
+
 ![truffle test](screenshots/roles.png)
 
 You must set the role account in Metamask to launch the role actions
 All actions has been implemented to use only with a specific role:
-Farmer
+
+Farmer:
 * Harvest
 * Process
 * Pack
@@ -49,10 +53,12 @@ Consumer
 * Purchase
 
 There are 2 buttons to show the Product Info: Fetch Data 1 and Fetch Data 2
+
 ![truffle test](screenshots/search_product_data1.png)
 ![truffle test](screenshots/search_product_data2.png)
 
 An Example to Transaction History done from local blockchain is the next:
+
 ![truffle test](screenshots/transactions.png)
 
 
